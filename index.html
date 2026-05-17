@@ -1,122 +1,640 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
+
 <head>
-  <title>Sandhani Portal(Admission-Mate 2025) Paschim Medinipur</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-  * {
-  box-sizing: border-box;
-  }
 
-  body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  /* Style the header */
-  .header {
-  padding: 30px;
-  text-align: center;
-  background: #ff0000;
-  color: white;
-  }
+<title>সন্ধানী পোর্টাল | Admission-Mate 2026</title>
 
-  /* Increase the font size of the h1 element */
-  .header h1 {
-  font-size: 40px;
-  }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  /* Style the top navigation bar */
-  .navbar {
-  overflow: hidden;
-  background-color: #ff0000;
-  }
+<style>
 
-  /* Style the navigation bar links */
-  .navbar a {
-  float: up;
-  display: block;
-  color: white;
-  text-align: left;
-  padding: 14px 20px;
-  text-decoration: none;
-  }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-  /* Right-aligned link */
-  .navbar a.right {
-  float: down;
-  }
+body{
+    font-family:'Hind Siliguri', sans-serif;
+    background:#f4f4f4;
+    color:#222;
+    overflow-x:hidden;
+}
 
-  /* Change color on hover */
-  .navbar a:hover {
-  background-color: #ddd;
-  color: black;
-  }
+/* SCROLLBAR */
 
-  /* Column container */
-  .row {  
-  display: flex;
-  flex-wrap: wrap;
-  }
- 
-  /* Create two unequal columns that sits next to each other */
-  /* Sidebar/left column */
-  .side {
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-  }
-    
-  /* Main column */
-  .main {   
-  flex: 70%;
-  background-color: yellow;
-  padding: 20px;
-  }
+::-webkit-scrollbar{
+    width:8px;
+}
 
-  /* Footer */
-  .footer {
-  padding: 10px;
-  text-align: center;
-  background: #ddd;
-  }
-  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-  }
+::-webkit-scrollbar-thumb{
+    background:#ff0000;
+    border-radius:10px;
+}
 
-  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-  @media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1974&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+    color:white;
+}
+
+.hero-content{
+    max-width:900px;
+    animation:fadeIn 1.2s ease;
+}
+
+.hero h1{
+    font-size:6rem;
+    margin-bottom:20px;
+    color:#ff3b3b;
+    text-shadow:2px 2px 12px rgba(0,0,0,0.6);
+}
+
+.hero p{
+    font-size:2rem;
+    line-height:1.8;
+}
+
+.hero-btns{
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    margin:10px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:700;
+    transition:0.4s;
+}
+
+.btn-primary{
+    background:#ff0000;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:white;
+    color:#ff0000;
+    transform:translateY(-4px);
+}
+
+.btn-secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:black;
+}
+
+/* NOTICE */
+
+.notice{
+    background:#111;
+    color:white;
+    padding:12px;
+    font-size:1rem;
+    overflow:hidden;
+}
+
+.notice marquee{
+    font-weight:600;
+    color:#ff4d4d;
+}
+
+/* SECTION */
+
+.section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+    color:#d40000;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* CARDS */
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card img{
     width:100%;
-  } 
-    
-  </style>
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    color:#d60000;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#555;
+    line-height:1.7;
+}
+
+/* COLLEGE SECTION */
+
+.college-section{
+    background:white;
+}
+
+.college-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
+}
+
+.college-grid a{
+    text-decoration:none;
+    background:linear-gradient(135deg,#ff0000,#c30000);
+    color:white;
+    padding:18px;
+    border-radius:14px;
+    text-align:center;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.college-grid a:hover{
+    transform:scale(1.05);
+    background:linear-gradient(135deg,#111,#444);
+}
+
+/* HELP DESK */
+
+.helpdesk{
+    background:#fff5f5;
+}
+
+.help-flex{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.help-flex img{
+    width:340px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.help-text{
+    flex:1;
+}
+
+.help-text h2{
+    color:#d10000;
+    font-size:2.4rem;
+    margin-bottom:20px;
+}
+
+.help-text p{
+    line-height:2;
+    color:#444;
+    font-size:1.05rem;
+}
+
+/* FLOAT BUTTON */
+
+.float-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    color:white;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    transition:0.4s;
+    z-index:999;
+}
+
+.float-btn:hover{
+    transform:scale(1.1);
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h3{
+    color:#ff3b3b;
+    margin-bottom:15px;
+}
+
+footer p{
+    line-height:1.8;
+    color:#ccc;
+}
+
+.footer-links{
+    margin-top:20px;
+}
+
+.footer-links a{
+    color:white;
+    margin:0 10px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer-links a:hover{
+    color:#ff3b3b;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+.section{
+    padding:60px 6%;
+}
+
+.help-flex{
+    flex-direction:column;
+}
+
+.help-flex img{
+    width:100%;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-  <div class="header">
-    <h1>সন্ধানী পোর্টাল (Admission-Mate 2025)</h1>
-    <p>Made By ভারতের ছাত্র ফেডারেশন (SFI) পশ্চিম মেদিনীপুর জেলা কমিটি</p>
-     <h2>ভর্তি সংক্রান্ত যেকোনো সহায়তার জন্য নিচের লিংকে ক্লিক করে গ্রুপে যুক্ত হোন </h2><a href="https://chat.whatsapp.com/E8UdPprPvmm0yhQzTjsFtV" target="_blank">SFI ADMISSION MATE PASCHIM MEDINIPUR</a>
-  </div>
-  <div class="main">
-  <h2>College Admission Help-Desk 2025</h2><img src="am2 copy.jpg" alt="Help-Desk 2025" width="300" height="700"></div>
-  <div class="main">
-    <h2>সন্ধানী পোর্টাল সম্পর্কিত নির্দেশিকা</h2>
-    <h5>ছাত্র-ছাত্রীদের প্রতি</h5>
-    <p>ভারতের ছাত্র ফেডারেশন (SFI) পশ্চিম মেদিনীপুর জেলা কমিটির পক্ষ থেকে, সমস্ত ছাত্রছাত্রীদের সংগ্রামী অভিনন্দন ও শুভেচ্ছা জানাই। এই বছর ২০২৫ সালে কলেজে নবাগত ছাত্রছাত্রীদের ফর্ম ফিলাপসহ, ভর্তিতে যেকোনো সহায়তার জন্য এই সন্ধানী পোর্টাল বানানো হয়েছে। নিচের এডমিশন পোর্টাল ২০২৫ এই লিংকে ক্লিক করে যেকোনো কলেজের ভর্তির ফর্ম ফিলাপ করা যাবে। নিচে আমাদের জেলার সমস্ত কলেজগুলির নাম, দেওয়া আছে , কলেজের নামে ক্লিক করে ঐ কলেজে আমাদের হেল্প-ডেস্কে যোগাযোগ করলে, বিনামূল্যে ফর্ম ফিলাপসহ অন্যান্য যেকোনো সহায়তা পাওয়া যাবে সারা জেলা জুড়ে।</p><br>
-  </div>
-  <h2><a href="usermanual.html">কলেজে ভর্তি সংক্রান্ত সমস্ত তথ্য পেতে এখানে ক্লিক করুন</a></h2>
-  <h2>পশ্চিমবঙ্গের যেকোনো কলেজে ভর্তির ফর্ম ফিলাপ করুন নিচের লিংকে ক্লিক করে</h2><a href="https://wbcap.in//" target="_blank">এডমিশন পোর্টাল ২০২৪</a>
-  <div class="navbar">
-    <a href="mca.html">Midnapore College(Autonomous)</a> <a href="gope.html">RNLK Women's College(Gope)</a> <a href="debra.html">Debra College</a> <a href="ghatal.html">Ghatal College</a> <a href="garhbeta.html">Garhbeta College</a> <a href="goaltore.html">Goaltore College</a> <a href="belda.html">Belda College</a> <a href="sabang.html">Sabang Sajanikanta Mahavidyalaya</a> <a href="kd.html">KD College</a> <a href="kashmuli.html">Kashmuli College</a> <a href="cktown.html">Chandrakona Vidyasagar Mahavidyalaya</a> <a href="Chaipat.html">Chaipat SPB Mahavidyalaya <a href="kharagpur.html">Kharagpur College</a> <a href="dantan.html">Dantan Bhattar College</a> <a href="mohanpur.html">Mohanpur Government General Degree College</a> <a href="narayangarh.html">Narayangarh Govt.General Degree College</a> <a href="keshiary.html">Keshiary Government General Degree College</a> <a href="salboni.html">Salboni Government General Degree College</a> </a> <a href="pingla.html">Pingla Thana Mahavidyalaya</a> </a>
-  </div>
-  <div id="sfcbrqsks1excum2qy5fysh3s317wgndmlx"></div>
-  <script type="text/javascript" src="https://counter4.optistats.ovh/private/counter.js?c=brqsks1excum2qy5fysh3s317wgndmlx&amp;down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="website counter code"><img src="https://counter4.optistats.ovh/private/freecounterstat.php?c=brqsks1excum2qy5fysh3s317wgndmlx" border="0" title="website counter code" alt="website counter code"></a></noscript>
-  <h5>&copy; Social Media Team SFI PM DC</h5>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>সন্ধানী পোর্টাল</h1>
+
+        <p>
+            Admission-Mate 2026 <br>
+            ভারতের ছাত্র ফেডারেশন (SFI) পশ্চিম মেদিনীপুর জেলা কমিটির উদ্যোগে
+            কলেজ ভর্তি সংক্রান্ত সহায়তা পোর্টাল
+        </p>
+
+        <div class="hero-btns">
+
+            <a href="https://wbcap.in/" target="_blank" class="btn btn-primary">
+                এডমিশন পোর্টাল ২০২৬
+            </a>
+
+            <a href="https://chat.whatsapp.com/E8UdPprPvmm0yhQzTjsFtV"
+               target="_blank"
+               class="btn btn-secondary">
+                WhatsApp গ্রুপে যুক্ত হোন
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- NOTICE -->
+
+<div class="notice">
+
+    <marquee>
+        🔴 কলেজে ভর্তি সংক্রান্ত যেকোনো সহায়তার জন্য আমাদের হেল্পডেস্কে যোগাযোগ করুন |
+        🔴 সম্পূর্ণ বিনামূল্যে ফর্ম ফিলাপ সহায়তা |
+        🔴 পশ্চিম মেদিনীপুর জেলার সর্বত্র SFI Admission Help Desk
+    </marquee>
+
+</div>
+
+<!-- HELP DESK -->
+
+<section class="section helpdesk">
+
+    <div class="help-flex">
+
+        <img src="am2 copy.jpg" alt="Admission Help Desk">
+
+        <div class="help-text">
+
+            <h2>College Admission Help Desk 2025</h2>
+
+            <p>
+                ২০২৬ সালে কলেজে ভর্তি হতে ইচ্ছুক ছাত্রছাত্রীদের জন্য
+                তৈরি করা হয়েছে এই "সন্ধানী পোর্টাল"।
+                এখানে পশ্চিম মেদিনীপুরসহ পশ্চিমবঙ্গের বিভিন্ন কলেজে ভর্তি,
+                ফর্ম ফিলাপ, সাবজেক্ট নির্বাচন,
+                ডকুমেন্ট আপলোড এবং কাউন্সেলিং সংক্রান্ত
+                যাবতীয় সহায়তা প্রদান করা হচ্ছে।
+            </p>
+
+            <br>
+
+            <a href="usermanual.html" class="btn btn-primary">
+                ভর্তি নির্দেশিকা দেখুন
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>আমাদের পরিষেবা</h2>
+        <p>ছাত্রস্বার্থে - শিক্ষাস্বার্থে, ছাত্রছাত্রীদের পাশে সর্বদা SFI</p>
+
+    </div>
+
+    <div class="card-grid">
+
+        <div class="card">
+
+             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1171&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h3>ফর্ম ফিলাপ সহায়তা</h3>
+
+                <p>
+                    অনলাইন কলেজ ভর্তি ফর্ম পূরণে
+                    সম্পূর্ণ বিনামূল্যে সাহায্য।
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1170&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h3>সাবজেক্ট কাউন্সেলিং</h3>
+
+                <p>
+                    কোন বিষয় নিয়ে পড়বেন,
+                    কীভাবে ভবিষ্যৎ গড়বেন —
+                    তার পরামর্শ।
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://plus.unsplash.com/premium_photo-1773833404191-63c50af30499?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Help Desk">
+
+            <div class="card-content">
+
+                <h3>জেলা জুড়ে হেল্পডেস্ক</h3>
+
+                <p>
+                    পশ্চিম মেদিনীপুরের বিভিন্ন কলেজে
+                    SFI Admission Help Desk।
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- COLLEGES -->
+
+<section class="section college-section">
+
+    <div class="section-title">
+
+        <h2>কলেজ তালিকা</h2>
+        <p>নিচের কলেজগুলিতে সহায়তার জন্য যোগাযোগ করুন</p>
+
+    </div>
+
+    <div class="college-grid">
+
+        <a href="mca.html">Midnapore College</a>
+        <a href="gope.html">RNLK Women's College</a>
+        <a href="debra.html">Debra College</a>
+        <a href="ghatal.html">Ghatal College</a>
+        <a href="garhbeta.html">Garhbeta College</a>
+        <a href="goaltore.html">Goaltore College</a>
+        <a href="belda.html">Belda College</a>
+        <a href="sabang.html">Sabang College</a>
+        <a href="kd.html">KD College</a>
+        <a href="kashmuli.html">Kashmuli College</a>
+        <a href="cktown.html">Chandrakona College</a>
+        <a href="Chaipat.html">Chaipat SPB College</a>
+        <a href="kharagpur.html">Kharagpur College</a>
+        <a href="dantan.html">Dantan Bhattar College</a>
+        <a href="mohanpur.html">Mohanpur Govt College</a>
+        <a href="narayangarh.html">Narayangarh Govt College</a>
+        <a href="keshiary.html">Keshiary Govt College</a>
+        <a href="salboni.html">Salboni Govt College</a>
+        <a href="pingla.html">Pingla Thana Mahavidyalaya</a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>সন্ধানী পোর্টাল ২০২৫</h3>
+
+    <p>
+        ভারতের ছাত্র ফেডারেশন (SFI)<br>
+        পশ্চিম মেদিনীপুর জেলা কমিটি
+    </p>
+
+    <div class="footer-links">
+
+        <a href="usermanual.html">নির্দেশিকা</a>
+
+        <a href="https://wbcap.in/" target="_blank">
+            Admission Portal
+        </a>
+
+        <a href="https://chat.whatsapp.com/E8UdPprPvmm0yhQzTjsFtV"
+           target="_blank">
+            WhatsApp
+        </a>
+
+    </div>
+
+    <!-- VISITOR COUNTER -->
+
+    <div style="margin-top:30px;">
+
+        <h3>👥 Total Visitors</h3>
+
+        <div id="sfivisitcounter"></div>
+
+        <script type="text/javascript"
+        src="https://counter.websiteout.com/js/2/0/0/0">
+        </script>
+
+    </div>
+
+    <!-- JOIN SFI SECTION -->
+
+    <div style="margin-top:35px;">
+
+        <h3 style="color:#ff3b3b; margin-bottom:18px;">
+            JOIN SFI
+        </h3>
+
+        <a href="https://wa.me/917797340540"
+           target="_blank"
+           style="
+           display:inline-block;
+           margin:10px;
+           padding:14px 28px;
+           background:#25d366;
+           color:white;
+           text-decoration:none;
+           border-radius:40px;
+           font-weight:bold;
+           transition:0.4s;">
+           
+           WhatsApp: 7797340540
+
+        </a>
+
+        <a href="https://wa.me/919749501875"
+           target="_blank"
+           style="
+           display:inline-block;
+           margin:10px;
+           padding:14px 28px;
+           background:#25d366;
+           color:white;
+           text-decoration:none;
+           border-radius:40px;
+           font-weight:bold;
+           transition:0.4s;">
+           
+           WhatsApp: 9749501875
+
+        </a>
+
+    </div>
+
+</footer>
+
+    <p style="font-size:15px; color:#aaa;">
+        MADE AND MAINTAINED BY SFI PASCHIM MEDINIPUR
+    </p>
+
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a href="https://chat.whatsapp.com/E8UdPprPvmm0yhQzTjsFtV"
+   class="float-btn"
+   target="_blank">
+
+   ☎
+
+</a>
+
 </body>
 </html>
+```
