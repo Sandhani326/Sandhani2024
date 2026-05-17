@@ -388,7 +388,7 @@ footer p{
 
     <marquee>
         🔴 কলেজে ভর্তি সংক্রান্ত যেকোনো সহায়তার জন্য আমাদের হেল্পডেস্কে যোগাযোগ করুন |
-        🔴 সম্পূর্ণ বিনামূল্যে ফর্ম ফিলাপ সহায়তা |
+        🔴 বিনামূল্যে ফর্ম ফিলাপ সহায়তা |
         🔴 পশ্চিম মেদিনীপুর জেলার সর্বত্র SFI Admission Help Desk
     </marquee>
 
@@ -450,7 +450,7 @@ footer p{
 
                 <p>
                     অনলাইন কলেজ ভর্তি ফর্ম পূরণে
-                    সম্পূর্ণ বিনামূল্যে সাহায্য।
+                    বিনামূল্যে সাহায্য।
                 </p>
 
             </div>
@@ -502,8 +502,8 @@ footer p{
 
     <div class="section-title">
 
-        <h2>কলেজ তালিকা</h2>
-        <p>নিচের কলেজগুলিতে সহায়তার জন্য যোগাযোগ করুন</p>
+        <h2>কলেজের তালিকা</h2>
+        <p>সহায়তার জন্য নিচের কলেজগুলির হেল্পডেস্কে যোগাযোগ করুন</p>
 
     </div>
 
@@ -614,15 +614,96 @@ footer p{
            WhatsApp: 9749501875
 
         </a>
+    </div>
+</footer>
+<div id="date-time-box" style="
+    margin-top:30px;
+    padding:20px;
+    background:#1b1b1b;
+    border-radius:20px;
+    display:inline-block;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+">
 
+    <h3 style="
+        color:#ff3b3b;
+        margin-bottom:15px;
+        font-size:20px;
+    ">
+      Current Date & Time
+    </h3>
+
+    <div id="current-date" style="
+        font-size:20px;
+        color:white;
+        margin-bottom:10px;
+        font-weight:600;
+    ">
     </div>
 
+    <div id="digital-clock" style="
+        font-size:25px;
+        color:#25d366;
+        font-weight:bold;
+        letter-spacing:2px;
+    ">
+    </div>
+
+</div>
+
+<script>
+
+function updateDateTime(){
+
+    const now = new Date();
+
+    // DATE
+
+    const options = {
+        weekday:'long',
+        year:'numeric',
+        month:'long',
+        day:'numeric'
+    };
+
+    document.getElementById("current-date").innerHTML =
+        now.toLocaleDateString('en-IN', options);
+
+    // TIME
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    let ampm = hours >= 12 ? 'PM' : 'AM';
+
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    const timeString =
+        hours + ":" + minutes + ":" + seconds + " " + ampm;
+
+    document.getElementById("digital-clock").innerHTML =
+        timeString;
+}
+
+// RUN CLOCK
+
+setInterval(updateDateTime,1000);
+
+updateDateTime();
+
+</script>
+</div>
 </footer>
 
     <p style="font-size:15px; color:#aaa;">
         MADE AND MAINTAINED BY SFI PASCHIM MEDINIPUR
     </p>
-
 </footer>
 
 <!-- FLOATING WHATSAPP BUTTON -->
