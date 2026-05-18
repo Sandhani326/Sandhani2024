@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+<title>Belda COLLEGE HelpDesk</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Hind Siliguri', sans-serif;
+    background:#f4f4f4;
+    overflow-x:hidden;
+}
+
+/* HERO HEADER */
+
+.header{
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+    url('https://images.shiksha.com/mediadata/images/1554113998phpU1WyJB.jpeg');
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.header h1{
+    font-size:3rem;
+    margin-bottom:20px;
+    color:#ff3b3b;
+    text-shadow:2px 2px 10px rgba(0,0,0,0.6);
+}
+
+.header p{
+    font-size:1.2rem;
+    margin-bottom:25px;
+}
+
+.header h2{
+    font-size:1.3rem;
+    margin-bottom:20px;
+    line-height:1.7;
+}
+
+.whatsapp-btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:#25d366;
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:bold;
+    transition:0.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.whatsapp-btn:hover{
+    transform:translateY(-4px);
+    background:#1faa52;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    padding:50px 8%;
+    gap:30px;
+}
+
+/* LEFT SIDE */
+
+.side{
+    flex:1 1 350px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.side h2{
+    color:#d60000;
+    margin-bottom:20px;
+    font-size:2rem;
+}
+
+.side img{
+    width:100%;
+    max-width:500px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* RIGHT SIDE */
+
+.main{
+    flex:1 1 350px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.main h2{
+    color:#d10000;
+    font-size:2rem;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.portal-btn{
+    display:inline-block;
+    width:fit-content;
+    padding:16px 35px;
+    background:linear-gradient(135deg,#ff0000,#b80000);
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-size:1.1rem;
+    font-weight:bold;
+    transition:0.4s;
+    box-shadow:0 8px 20px rgba(255,0,0,0.3);
+}
+
+.portal-btn:hover{
+    transform:scale(1.05);
+    background:linear-gradient(135deg,#111,#444);
+}
+
+/* EXTRA SECTION */
+
+.info-box{
+    margin-top:30px;
+    background:#fff5f5;
+    border-left:5px solid red;
+    padding:20px;
+    border-radius:12px;
+}
+
+.info-box h3{
+    color:#d60000;
+    margin-bottom:10px;
+}
+
+.info-box p{
+    color:#444;
+    line-height:1.8;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:40px;
+}
+
+.footer h3{
+    color:#ff3b3b;
+    margin-bottom:15px;
+}
+
+.footer p{
+    color:#ccc;
+    line-height:1.8;
+}
+
+/* VISITOR COUNTER */
+
+.counter-box{
+    margin-top:25px;
+}
+
+/* FLOATING BUTTON */
+
+.float-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    color:white;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    transition:0.4s;
+    z-index:999;
+}
+
+.float-btn:hover{
+    transform:scale(1.1);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width:768px){
+
+.header h1{
+    font-size:2.2rem;
+}
+
+.header h2{
+    font-size:1.1rem;
+}
+
+.main h2{
+    font-size:1.5rem;
+}
+
+.container{
+    padding:30px 5%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+
+    <h1>
+        Belda College HelpDesk
+    </h1>
+
+    <p>
+        Made By ভারতের ছাত্র ফেডারেশন (SFI)
+    </p>
+
+    <h2>
+        ভর্তি সংক্রান্ত যেকোনো সহায়তার জন্য নিচের লিংকে ক্লিক করে গ্রুপে যুক্ত হোন
+    </h2>
+
+    <a href="https://chat.whatsapp.com/E8UdPprPvmm0yhQzTjsFtV"
+       target="_blank"
+       class="whatsapp-btn">
+
+       WhatsApp Group Join করুন
+
+    </a>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="container">
+
+    <!-- LEFT -->
+
+    <div class="side">
+
+        <h2>
+            Belda College HelpDesk 2026
+        </h2>
+
+        <img src="belda26.jpeg"
+             alt="Help-Desk 2026">
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="main">
+
+        <h2>
+            পশ্চিমবঙ্গের যেকোনো কলেজে ভর্তির ফর্ম ফিলাপ করুন নিচের লিংকে ক্লিক করে
+        </h2>
+
+        <a href="https://wbcap.in/"
+           target="_blank"
+           class="portal-btn">
+
+           এডমিশন পোর্টাল ২০২৬
+
+        </a>
+
+        <div class="info-box">
+
+            <h3>
+                🎓 SFI Admission Assistance
+            </h3>
+
+            <p>
+                কলেজ ভর্তি, ফর্ম ফিলাপ, সাবজেক্ট নির্বাচন,
+                ডকুমেন্ট আপলোড এবং অন্যান্য যেকোনো সমস্যার
+                জন্য আমাদের হেল্পডেস্কের সাথে যোগাযোগ করুন।
+                বিনামূল্যে সহায়তা প্রদান করা হবে।
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+    <h3>
+        BELDA COLLEGE HelpDesk
+    </p>
+
+    <!-- VISITOR COUNTER -->
+
+    <div class="counter-box">
+
+        <h3>👥 Total Visitors</h3>
+
+        <div id="sfivisitcounter"></div>
+
+        <script type="text/javascript"
+        src="https://counter.websiteout.com/js/2/0/0/0">
+        </script>
+
+    </div>
+<!-- JOIN SFI SECTION -->
+
+    <div style="margin-top:35px;">
+
+        <h3 style="color:#ff3b3b; margin-bottom:18px;">
+            JOIN SFI
+        </h3>
+
+        <a href="https://wa.me/917797340540"
+           target="_blank"
+           style="
+           display:inline-block;
+           margin:10px;
+           padding:14px 28px;
+           background:#25d366;
+           color:white;
+           text-decoration:none;
+           border-radius:40px;
+           font-weight:bold;
+           transition:0.4s;">
+           
+           WhatsApp: 7797340540
+
+        </a>
+
+        <a href="https://wa.me/919749501875"
+           target="_blank"
+           style="
+           display:inline-block;
+           margin:10px;
+           padding:14px 28px;
+           background:#25d366;
+           color:white;
+           text-decoration:none;
+           border-radius:40px;
+           font-weight:bold;
+           transition:0.4s;">
+           
+           WhatsApp: 9749501875
+
+        </a>
+</div>
+    <p style="font-size:15px; color:#aaa;">
+        MADE AND MAINTAINED BY SFI PASCHIM MEDINIPUR
+    </p>
+
+</div>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a href="https://chat.whatsapp.com/E8UdPprPvmm0yhQzTjsFtV"
+   target="_blank"
+   class="float-btn">
+
+☎
+
+</a>
+
+</body>
+</html>
